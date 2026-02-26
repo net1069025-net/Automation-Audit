@@ -13,7 +13,7 @@ api_key = st.sidebar.text_input("1. ใส่ Gemini API Key", type="password")
 
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
 
     # ส่วนรับนโยบายบริษัท
     st.subheader("2. นโยบายบริษัท (Master Policy)")
@@ -97,4 +97,5 @@ if api_key:
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 )
 else:
+
     st.info("กรุณาใส่ API Key ที่แถบด้านซ้าย เพื่อเปิดใช้งานโปรแกรม")
